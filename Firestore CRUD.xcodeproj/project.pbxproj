@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		233A67DE0CF9614BD82D78DB /* Pods_Firestore_CRUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150A0466184DFDA5FB4B15CA /* Pods_Firestore_CRUD.framework */; };
+		2A15CE93243662980023E6FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A15CE92243662980023E6FD /* GoogleService-Info.plist */; };
+		2A15CE95243664FE0023E6FD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15CE94243664FE0023E6FD /* Person.swift */; };
 		2A5CE657243634420076F665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE656243634420076F665 /* AppDelegate.swift */; };
 		2A5CE659243634420076F665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE658243634420076F665 /* SceneDelegate.swift */; };
 		2A5CE65B243634420076F665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE65A243634420076F665 /* ViewController.swift */; };
 		2A5CE65E243634420076F665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE65C243634420076F665 /* Main.storyboard */; };
 		2A5CE660243634430076F665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE65F243634430076F665 /* Assets.xcassets */; };
 		2A5CE663243634430076F665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE661243634430076F665 /* LaunchScreen.storyboard */; };
-		2A5CE66B243637390076F665 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE66A243637390076F665 /* GoogleService-Info.plist */; };
 		2A5CE66E24363CD10076F665 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE66D24363CD10076F665 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		150A0466184DFDA5FB4B15CA /* Pods_Firestore_CRUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firestore_CRUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A15CE92243662980023E6FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A15CE94243664FE0023E6FD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2A5CE653243634420076F665 /* Firestore CRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firestore CRUD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CE656243634420076F665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CE658243634420076F665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +31,6 @@
 		2A5CE65F243634430076F665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A5CE662243634430076F665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5CE664243634430076F665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A5CE66A243637390076F665 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A5CE66D24363CD10076F665 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		54A7D402FAA91ADF8140B5A7 /* Pods-Firestore CRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore CRUD.release.xcconfig"; path = "Target Support Files/Pods-Firestore CRUD/Pods-Firestore CRUD.release.xcconfig"; sourceTree = "<group>"; };
 		7B20D84939F15D70487FB4D0 /* Pods-Firestore CRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore CRUD.debug.xcconfig"; path = "Target Support Files/Pods-Firestore CRUD/Pods-Firestore CRUD.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A15CE96243667190023E6FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A15CE94243664FE0023E6FD /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2A5CE64A243634420076F665 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 		2A5CE655243634420076F665 /* Firestore CRUD */ = {
 			isa = PBXGroup;
 			children = (
+				2A15CE96243667190023E6FD /* Model */,
 				2A5CE66C24363B570076F665 /* Controller */,
 				2A5CE656243634420076F665 /* AppDelegate.swift */,
 				2A5CE658243634420076F665 /* SceneDelegate.swift */,
@@ -74,7 +85,7 @@
 				2A5CE65F243634430076F665 /* Assets.xcassets */,
 				2A5CE661243634430076F665 /* LaunchScreen.storyboard */,
 				2A5CE664243634430076F665 /* Info.plist */,
-				2A5CE66A243637390076F665 /* GoogleService-Info.plist */,
+				2A15CE92243662980023E6FD /* GoogleService-Info.plist */,
 			);
 			path = "Firestore CRUD";
 			sourceTree = "<group>";
@@ -166,7 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5CE663243634430076F665 /* LaunchScreen.storyboard in Resources */,
-				2A5CE66B243637390076F665 /* GoogleService-Info.plist in Resources */,
+				2A15CE93243662980023E6FD /* GoogleService-Info.plist in Resources */,
 				2A5CE660243634430076F665 /* Assets.xcassets in Resources */,
 				2A5CE65E243634420076F665 /* Main.storyboard in Resources */,
 			);
@@ -221,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A15CE95243664FE0023E6FD /* Person.swift in Sources */,
 				2A5CE65B243634420076F665 /* ViewController.swift in Sources */,
 				2A5CE657243634420076F665 /* AppDelegate.swift in Sources */,
 				2A5CE66E24363CD10076F665 /* AddViewController.swift in Sources */,

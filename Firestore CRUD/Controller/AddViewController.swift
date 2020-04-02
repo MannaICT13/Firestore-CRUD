@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class AddViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
-    
     @IBOutlet weak var cityTextField: UITextField!
-    
     @IBOutlet weak var saveBtnOutlet: UIButton!
   
+    
+    
+    var db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +28,45 @@ class AddViewController: UIViewController {
     
     
     @IBAction func saveBtnAction(_ sender: Any) {
+        
+        guard let name = nameTextField.text else{return}
+        guard let age = ageTextField.text else{return}
+        guard let city = cityTextField.text else{return}
+        
+        writePerson(name: name, age: Int(age)! , city: city)
+        
     }
     
 
 
+}
+extension AddViewController{
+    
+    
+    func writePerson(name: String,age: Int,city:String){
+        
+        db.collection("Person").addDocument(data: [
+        
+            "name":name,
+            "age":age,
+            "city":city
+        
+        ]) { (error) in
+            
+            if let err = error{
+                
+                print(err.localizedDescription)
+                return
+            }else{
+                print("Successfully added Person")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        
+        
+    }
+    
+    
+    
+    
 }

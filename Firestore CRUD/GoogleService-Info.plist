@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:449841379230:ios:1333d28f6cb4e1b6dcc88f</string>
+	<string>1:449841379230:ios:ef47386e12cb8713dcc88f</string>
 	<key>DATABASE_URL</key>
 	<string>https://login-app-526aa.firebaseio.com</string>
 </dict>

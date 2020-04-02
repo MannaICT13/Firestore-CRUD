@@ -14,10 +14,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YmM-CY-UpW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Jam-AB-LI1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AyQ-AC-X3c"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YmM-CY-UpW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FRn-qR-VSN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YmM-CY-UpW" secondAttribute="trailing" id="INr-3s-LIK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YmM-CY-UpW" secondAttribute="bottom" id="eUQ-09-wqH"/>
+                            <constraint firstItem="YmM-CY-UpW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="srf-X6-Aha"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="I40-ty-ZYc"/>
+                    <connections>
+                        <outlet property="tableView" destination="YmM-CY-UpW" id="zO6-eT-DDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
