@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>449841379230-06ec9n5j9bbficots8oaogpt0anr72vv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.449841379230-06ec9n5j9bbficots8oaogpt0anr72vv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBnbbkGJW14AFT8MTsxcv6zOmkwJZMHqII</string>
+	<key>GCM_SENDER_ID</key>
+	<string>449841379230</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ict.manna.Firestore-CRUD</string>
+	<key>PROJECT_ID</key>
+	<string>login-app-526aa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>login-app-526aa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:449841379230:ios:1333d28f6cb4e1b6dcc88f</string>
+	<key>DATABASE_URL</key>
+	<string>https://login-app-526aa.firebaseio.com</string>
+</dict>
+</plist>
