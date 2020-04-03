@@ -70,7 +70,10 @@ extension ViewController{
             
             if let err = error{
                 
-                print(err.localizedDescription)
+            //    print(err.localizedDescription)
+                self.alertDialouge(title: "Error Alert", msg: err.localizedDescription)
+                
+                
                 return
             }else{
                 
@@ -115,9 +118,11 @@ extension ViewController{
             
             if let err = error{
                 
-                print(err.localizedDescription)
+               // print(err.localizedDescription)
+                self.alertDialouge(title: "Error Alert!", msg: err.localizedDescription)
             }else{
-                print("Successfully delete data")
+               // print("Successfully delete data")
+                self.alertDialouge(title: "Success Alert!", msg: "Successfully delete data")
             }
         }
         
@@ -137,7 +142,8 @@ extension ViewController{
         
         ]) { (error) in
             if let err = error{
-                print(err.localizedDescription)
+                //print(err.localizedDescription)
+                self.alertDialouge(title: "Error Alert!", msg: err.localizedDescription)
             }else{
                 print("Successfully update data")
                 
@@ -264,4 +270,24 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate{
     
     
     
+}
+
+extension UIViewController{
+    
+    
+    
+    
+      func alertDialouge(title :String,msg:String){
+          
+          let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+          
+          let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+          alertController.addAction(ok)
+          self.present(alertController, animated: true, completion: nil)
+      
+      
+      
+      
+      }
+      
 }

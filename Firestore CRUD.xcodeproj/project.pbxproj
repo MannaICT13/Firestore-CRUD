@@ -18,6 +18,8 @@
 		2A5CE663243634430076F665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE661243634430076F665 /* LaunchScreen.storyboard */; };
 		2A5CE66E24363CD10076F665 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE66D24363CD10076F665 /* AddViewController.swift */; };
 		2AC6314E24372B4900406718 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6314D24372B4900406718 /* TableViewCell.swift */; };
+		2AC631502437375400406718 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6314F2437375400406718 /* Utilities.swift */; };
+		2AC63152243737A100406718 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC63151243737A100406718 /* TextFieldValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		2A5CE664243634430076F665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A5CE66D24363CD10076F665 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		2AC6314D24372B4900406718 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2AC6314F2437375400406718 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2AC63151243737A100406718 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldValidation.swift; path = "/Users/mdkhaledhasanmanna/Documents/XCodeProject/Firestore CRUD/Firestore CRUD/Model/TextFieldValidation.swift"; sourceTree = "<absolute>"; };
 		54A7D402FAA91ADF8140B5A7 /* Pods-Firestore CRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore CRUD.release.xcconfig"; path = "Target Support Files/Pods-Firestore CRUD/Pods-Firestore CRUD.release.xcconfig"; sourceTree = "<group>"; };
 		7B20D84939F15D70487FB4D0 /* Pods-Firestore CRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore CRUD.debug.xcconfig"; path = "Target Support Files/Pods-Firestore CRUD/Pods-Firestore CRUD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				2A15CE94243664FE0023E6FD /* Person.swift */,
+				2AC6314F2437375400406718 /* Utilities.swift */,
+				2AC63151243737A100406718 /* TextFieldValidation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC63152243737A100406718 /* TextFieldValidation.swift in Sources */,
 				2A15CE95243664FE0023E6FD /* Person.swift in Sources */,
 				2A5CE65B243634420076F665 /* ViewController.swift in Sources */,
+				2AC631502437375400406718 /* Utilities.swift in Sources */,
 				2A5CE657243634420076F665 /* AppDelegate.swift in Sources */,
 				2AC6314E24372B4900406718 /* TableViewCell.swift in Sources */,
 				2A5CE66E24363CD10076F665 /* AddViewController.swift in Sources */,

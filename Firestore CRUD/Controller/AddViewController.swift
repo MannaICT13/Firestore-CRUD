@@ -56,10 +56,13 @@ extension AddViewController{
             
             if let err = error{
                 
-                print(err.localizedDescription)
+              //  print(err.localizedDescription)
+                self.alertDialouge(title: "Error Alert!", msg: err.localizedDescription)
+                
                 return
             }else{
-                print("Successfully added Person")
+                //print("Successfully added Person")
+               // self.alertDialouge(title: "Success Alert!", msg: "Successfully added Person")
                 self.navigationController?.popViewController(animated: true)
             }
         }
@@ -71,3 +74,27 @@ extension AddViewController{
     
     
 }
+
+extension AddViewController{
+    
+    
+    
+    func alertDialouge(title :String,msg:String){
+        
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
+    
+    
+    
+    
+    }
+    
+    
+}
+
+
+
+
