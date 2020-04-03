@@ -22,6 +22,10 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Utilites.fillButtonStyle(button: saveBtnOutlet!)
+        Utilites.lineTextFieldStyle(textField: nameTextField)
+        Utilites.lineTextFieldStyle(textField: ageTextField)
+        Utilites.lineTextFieldStyle(textField: cityTextField)
       //  saveBtnOutlet.setTitle("\(total)", for: .normal)
 
        
@@ -57,7 +61,7 @@ extension AddViewController{
             if let err = error{
                 
               //  print(err.localizedDescription)
-                self.alertDialouge(title: "Error Alert!", msg: err.localizedDescription)
+                self.alertDialouge1(title: "Error Alert!", msg: err.localizedDescription)
                 
                 return
             }else{
@@ -79,7 +83,7 @@ extension AddViewController{
     
     
     
-    func alertDialouge(title :String,msg:String){
+    func alertDialouge1(title :String, msg:String){
         
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
