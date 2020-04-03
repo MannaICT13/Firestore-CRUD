@@ -26,10 +26,11 @@ class AddViewController: UIViewController {
         Utilites.lineTextFieldStyle(textField: nameTextField)
         Utilites.lineTextFieldStyle(textField: ageTextField)
         Utilites.lineTextFieldStyle(textField: cityTextField)
-      //  saveBtnOutlet.setTitle("\(total)", for: .normal)
+      // saveBtnOutlet.setTitle("\(total)", for: .normal)
 
        
     }
+    
     
     
     @IBAction func saveBtnAction(_ sender: Any) {
@@ -38,7 +39,21 @@ class AddViewController: UIViewController {
         guard let age = ageTextField.text else{return}
         guard let city = cityTextField.text else{return}
         
-        writePerson(name: name, age: Int(age)! , city: city)
+        
+        if TextFieldValidation.nameValidation(name: name) == false{
+            self.alertDialouge1(title: "Error Message!", msg: "Invalide Name")
+        }
+        else if TextFieldValidation.ageValidiation(age: age.trimmingCharacters(in: .whitespacesAndNewlines)) == false{
+            self.alertDialouge1(title: "Error Message!", msg: "Invalide Age")
+            
+        }else if TextFieldValidation.cityValidiation(city: city) == false{
+            self.alertDialouge1(title: "Error Message", msg: "Invalide City")
+        }else{
+              writePerson(name: name, age: Int(age)! , city: city)
+            
+        }
+        
+      
         
     }
     
