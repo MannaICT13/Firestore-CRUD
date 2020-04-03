@@ -125,6 +125,30 @@ extension ViewController{
         
         
     }
+    //update data
+    
+    func updatePerson(id : String,name : String,age:Int,city : String){
+        db.collection("Person").document(id).updateData([
+        
+            "name":name,
+            "age":age,
+            "city":city
+        
+        
+        ]) { (error) in
+            if let err = error{
+                print(err.localizedDescription)
+            }else{
+                print("Successfully update data")
+                
+                self.readPerson { (person) in
+                    self.person = person
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
+    }
     
     
     
@@ -184,7 +208,52 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate{
         })
         
         
-        let config = UISwipeActionsConfiguration(actions: [delete])
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, nil) in
+            
+            let alertController = UIAlertController(title: "Update Alert!", message: "You want to update row?", preferredStyle: .alert)
+            
+            alertController.addTextField { (nameTxt) in
+                nameTxt.placeholder = "Name"
+                nameTxt.text = self.person[indexPath.row].name
+                
+                
+            }
+            alertController.addTextField { (ageTxt) in
+                ageTxt.placeholder = "Age"
+                ageTxt.text = String(self.person[indexPath.row].age)
+                
+            }
+            alertController.addTextField { (cityTxt) in
+                cityTxt.placeholder = "City"
+                cityTxt.text = self.person[indexPath.row].city
+            }
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancel)
+            
+            let update = UIAlertAction(title: "Update", style: .default) { (action) in
+                
+                guard let name = alertController.textFields![0].text else{return}
+                guard let age = alertController.textFields![1].text else{return}
+                guard let city = alertController.textFields![2].text else{return}
+                
+                self.updatePerson(id: self.person[indexPath.row].id, name: name, age: Int(age)!, city: city)
+               
+                
+            }
+            alertController.addAction(update)
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+            
+            
+            
+        }
+        
+    
+        
+        let config = UISwipeActionsConfiguration(actions: [delete,edit])
         config.performsFirstActionWithFullSwipe = false
         return config
         
