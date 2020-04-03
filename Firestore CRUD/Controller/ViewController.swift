@@ -59,7 +59,7 @@ class ViewController: UIViewController {
 }
 extension ViewController{
     
-    
+    //read from firestore
     func readPerson(completed : @escaping ([Person]) -> Void){
         
         var person = [Person]()
@@ -107,6 +107,27 @@ extension ViewController{
         
     }
     
+    //delete from firestore
+    
+    func deletePerson(id:String){
+        
+        db.collection("Person").document(id).delete { (error) in
+            
+            if let err = error{
+                
+                print(err.localizedDescription)
+            }else{
+                print("Successfully delete data")
+            }
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
     
     
     
@@ -142,6 +163,35 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate{
        
               return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete", handler: { (action, view, nil) in
+           
+            let alertController = UIAlertController(title: "Delete Alert!", message: "You want to delete the row?", preferredStyle: .actionSheet)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancel)
+            let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+                  
+                          self.deletePerson(id: self.person[indexPath.row].id)
+                          self.person.remove(at: indexPath.row)
+                          self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                          
+            }
+            alertController.addAction(delete)
+            self.present(alertController, animated: true, completion: nil)
+            
+        })
+        
+        
+        let config = UISwipeActionsConfiguration(actions: [delete])
+        config.performsFirstActionWithFullSwipe = false
+        return config
+        
+        
+        
+    }
+    
     
     
     
