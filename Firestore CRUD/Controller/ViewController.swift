@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     var db = Firestore.firestore()
     var person = [Person]()
-    
+   // var totalAge = Int()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,14 +24,20 @@ class ViewController: UIViewController {
             
             self.person = person
             self.tableView.reloadData()
+            
         }
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        
+      //  tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
         
     }
-    
-  
+    override func viewWillAppear(_ animated: Bool) {
+        readPerson { (person) in
+            self.person = person
+            self.tableView.reloadData()
+        }
+    }
+ 
     
     
     func addNavigationItem(){
@@ -42,6 +48,9 @@ class ViewController: UIViewController {
 
     @objc func addBtnAction(_ sender : UIBarButtonItem){
         let addVC = storyboard?.instantiateViewController(identifier: "AddViewController") as! AddViewController
+        
+      //  addVC.total = totalAge
+        
         self.navigationController?.pushViewController(addVC, animated: true)
         
         
@@ -73,7 +82,10 @@ extension ViewController{
                     guard let city = result.data()["city"] else{return}
                 
                     person.append(Person(name: name as! String, age: age as! Int, city: city as! String, id: result.documentID))
+                    
                     self.tableView.reloadData()
+                    
+                    
                     
                     
                     
@@ -112,17 +124,22 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         person.count
     }
-   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 114
     }
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-              let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+             
+              let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
              // cell.textLabel?.text = person[indexPath.row].name
-             cell.textLabel?.text = String(person[indexPath.row].age)
-              
-              
+              // cell.textLabel?.text = String(person[indexPath.row].age)
+             //  totalAge += Int(person[indexPath.row].age)
+        cell.nameLbl.text = person[indexPath.row].name
+        cell.ageLbl.text = String(person[indexPath.row].age)
+        cell.cityLbl.text = person[indexPath.row].city
+        
+             
+       
               return cell
     }
     

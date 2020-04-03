@@ -16,12 +16,13 @@ class AddViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var saveBtnOutlet: UIButton!
   
-    
+   // var total = Int()
     
     var db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  saveBtnOutlet.setTitle("\(total)", for: .normal)
 
        
     }

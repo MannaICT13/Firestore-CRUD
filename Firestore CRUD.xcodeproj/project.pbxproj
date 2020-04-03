@@ -17,6 +17,7 @@
 		2A5CE660243634430076F665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE65F243634430076F665 /* Assets.xcassets */; };
 		2A5CE663243634430076F665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CE661243634430076F665 /* LaunchScreen.storyboard */; };
 		2A5CE66E24363CD10076F665 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CE66D24363CD10076F665 /* AddViewController.swift */; };
+		2AC6314E24372B4900406718 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6314D24372B4900406718 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2A5CE662243634430076F665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5CE664243634430076F665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A5CE66D24363CD10076F665 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		2AC6314D24372B4900406718 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		54A7D402FAA91ADF8140B5A7 /* Pods-Firestore CRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore CRUD.release.xcconfig"; path = "Target Support Files/Pods-Firestore CRUD/Pods-Firestore CRUD.release.xcconfig"; sourceTree = "<group>"; };
 		7B20D84939F15D70487FB4D0 /* Pods-Firestore CRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore CRUD.debug.xcconfig"; path = "Target Support Files/Pods-Firestore CRUD/Pods-Firestore CRUD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			children = (
 				2A5CE65A243634420076F665 /* ViewController.swift */,
 				2A5CE66D24363CD10076F665 /* AddViewController.swift */,
+				2AC6314D24372B4900406718 /* TableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				2A15CE95243664FE0023E6FD /* Person.swift in Sources */,
 				2A5CE65B243634420076F665 /* ViewController.swift in Sources */,
 				2A5CE657243634420076F665 /* AppDelegate.swift in Sources */,
+				2AC6314E24372B4900406718 /* TableViewCell.swift in Sources */,
 				2A5CE66E24363CD10076F665 /* AddViewController.swift in Sources */,
 				2A5CE659243634420076F665 /* SceneDelegate.swift in Sources */,
 			);
